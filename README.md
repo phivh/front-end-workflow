@@ -1,2 +1,4 @@
-# front-end-workflow
-A frontEnd workflow template
+## Front End Workflow
+A Front End Workflow With Gulp Task Runner
+## Installation
+  `npm install @phivh/front-end-workflow`
