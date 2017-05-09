@@ -4,12 +4,18 @@ A Front End Workflow With Gulp Task Runner
 
 # Installation
 
-  ```npm install```
+  ```sh
+  npm install
+  ```
 
 # Usage
 
-  ```npm start```
+  ```sh
+  npm start
+  ```
 
 # Test
 
-  ```npm test```
+  ```sh
+  npm test
+  ```
