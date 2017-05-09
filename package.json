@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FrontEnd Workflow With Gulp Task Runner",
   "main": "Gulpfile.js",
   "scripts": {
