@@ -4,7 +4,8 @@
   "description": "FrontEnd Workflow With Gulp Task Runner",
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
