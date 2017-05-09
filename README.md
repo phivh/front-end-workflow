@@ -6,10 +6,10 @@ A Front End Workflow With Gulp Task Runner
 
   ```npm install```
 
-#Usage
+# Usage
 
   ```npm start```
 
-#Test
+# Test
 
   ```npm test```
