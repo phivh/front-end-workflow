@@ -1,4 +1,4 @@
 var foo
     bar;
 
-console.log('Test');
+console.log('Hello Buddy!');

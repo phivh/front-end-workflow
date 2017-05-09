@@ -4,7 +4,7 @@
   "description": "FrontEnd Workflow With Gulp Task Runner",
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2"
+  },
+  "dependencies": {
+    "mocha": "^3.3.0"
   }
 }
