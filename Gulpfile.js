@@ -12,7 +12,7 @@ var gulp            =   require( 'gulp' ),
     jslint          =   require( 'gulp-jslint' ),
     autoprefixer    =   require( 'gulp-autoprefixer' ),
     imagemin        =   require( 'gulp-imagemin' ),
-    pngquant        =   require( 'gulp-pngquant' ),
+    pngquant        =   require( 'imagemin-pngquant' ),
     browserSync     =   require( 'browser-sync' );
 
 
@@ -21,16 +21,16 @@ var gulp            =   require( 'gulp' ),
 //-------------------------------------
 
 var src =  {
-    scss    : './src/scss/**/*.scss',
-    js      : './src/js/**/*.js',
-    img     : './src/img/*'
+    scss    : 'src/scss/**/*.scss',
+    js      : 'src/js/**/*.js',
+    img     : 'src/img/**/*'
 }
 
 var output = {
     css     :   'dist/css/',
     js      :   'dist/js/',
     img     :   'dist/images/',
-    html    :   'dist/**.html',
+    html    :   'dist/**/*.html',
     min_css :   'style.min.css',
     min_js  :   'script.min.js'
 }
@@ -99,7 +99,7 @@ gulp.task('image',function(){
         .pipe(imagemin({
             progressive : true,
             svgoPlugins : [ { removeViewBox :  false } ],
-            use         : [pngquant]
+            use         : [pngquant()]
         }))
         .pipe(gulp.dest(output.img));
 });
@@ -112,7 +112,8 @@ gulp.task('watch',function() {
     browserSync.init({
         server : {
             baseDir : './dist'
-        }
+        },
+        open: false
     });
     gulp.watch(src.scss, ['style']);
     gulp.watch(src.js, ['js']);

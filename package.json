@@ -31,10 +31,10 @@
     "gulp-jslint": "^1.0.10",
     "gulp-minify-css": "^1.2.4",
     "gulp-plumber": "^1.1.0",
-    "gulp-pngquant": "^1.0.10",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^2.1.2"
+    "gulp-uglify": "^2.1.2",
+    "imagemin-pngquant": "^5.0.0"
   },
   "dependencies": {
     "mocha": "^3.3.0"
