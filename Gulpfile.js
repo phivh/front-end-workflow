@@ -6,7 +6,7 @@ var gulp            =   require( 'gulp' ),
     sass            =   require( 'gulp-sass' ),
     concat          =   require( 'gulp-concat' ),
     plumber         =   require( 'gulp-plumber' ),
-    minifyCss       =   require( 'gulp-minify-css' ),
+    htmltidy        =   require( 'gulp-htmltidy' ),
     uglify          =   require( 'gulp-uglify' ),
     sourcemaps      =   require( 'gulp-sourcemaps' ),
     jslint          =   require( 'gulp-jslint' ),
@@ -21,6 +21,7 @@ var gulp            =   require( 'gulp' ),
 //-------------------------------------
 
 var src =  {
+    html    : 'src/**/*.html',
     scss    : 'src/scss/**/*.scss',
     js      : 'src/js/**/*.js',
     img     : 'src/img/**/*'
@@ -30,7 +31,7 @@ var output = {
     css     :   'dist/css/',
     js      :   'dist/js/',
     img     :   'dist/images/',
-    html    :   'dist/**/*.html',
+    html    :   'dist/',
     min_css :   'style.min.css',
     min_js  :   'script.min.js'
 }
@@ -52,6 +53,16 @@ var onError = function(err) {
     console.log(err);
     this.emit('end');
 }
+//-------------------------------------
+// TASK: Html Compile
+//-------------------------------------
+
+gulp.task( 'html', function(){
+    return gulp.src(src.html)
+        .pipe(htmltidy())
+        .pipe(gulp.dest(output.html))
+        .pipe(browserSync.reload(syncOption));
+});
 
 //-------------------------------------
 // TASK: Style Compile
@@ -115,14 +126,14 @@ gulp.task('watch',function() {
         },
         open: false
     });
+    gulp.watch(src.html, ['html']);
     gulp.watch(src.scss, ['style']);
-    gulp.watch(src.js, ['js']);
-    gulp.watch(src.img, ['image']);
-    gulp.watch(output.html).on('change',browserSync.reload);
+    gulp.watch(src.js,   ['js']);
+    gulp.watch(src.img,  ['image']);
 });
 
 //-------------------------------------
 // TASK: Default
 //-------------------------------------
 
-gulp.task('default',['watch', 'style', 'js', 'image']);
+gulp.task('default',['watch', 'html', 'style', 'js', 'image']);
