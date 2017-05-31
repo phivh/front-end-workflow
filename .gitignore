@@ -21,9 +21,6 @@ pids
 # Bower dependency directory (https://bower.io/)
 bower_components
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
 # Dependency directories
 node_modules/
 
@@ -41,5 +38,8 @@ node_modules/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Custom Ignore
+dist/
 
 # End of https://www.gitignore.io/api/node
