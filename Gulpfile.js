@@ -36,6 +36,13 @@ var output = {
     min_js  :   'script.min.js'
 }
 
+var htmlOption = {
+    doctype: 'html5', 
+    hideComments: false,
+    indent: true,
+    dropEmptyElements: false // Keep Elements empty content
+}
+
 var sassOption = { 
     outputStyle : 'compressed',
     precision   : 10
@@ -59,7 +66,7 @@ var onError = function(err) {
 
 gulp.task( 'html', function(){
     return gulp.src(src.html)
-        .pipe(htmltidy())
+        .pipe(htmltidy(htmlOption))
         .pipe(gulp.dest(output.html))
         .pipe(browserSync.reload(syncOption));
 });

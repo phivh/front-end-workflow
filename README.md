@@ -4,6 +4,13 @@ A Front End Workflow With Gulp Task Runner
 
 # Installation
 
+Clone this git
+
+ ```sh
+  git clone https://github.com/phivh/front-end-workflow.git
+  ```
+Nex step open your cmd and type
+
   ```sh
   npm install
   ```
@@ -12,6 +19,8 @@ A Front End Workflow With Gulp Task Runner
 
   ```sh
   npm start
+  or
+  gulp default
   ```
 
 # Test
