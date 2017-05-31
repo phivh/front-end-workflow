@@ -24,7 +24,7 @@ var src =  {
     html    : 'src/**/*.html',
     scss    : 'src/scss/**/*.scss',
     js      : 'src/js/**/*.js',
-    img     : 'src/img/**/*'
+    img     : 'src/images/**/*'
 }
 
 var output = {
