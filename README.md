@@ -13,7 +13,7 @@ Clone this git
 Nex step open your cmd and type
 
   ```sh
-  npm install or yarn add
+  npm install or yarn install
   ```
 
 # Usage
