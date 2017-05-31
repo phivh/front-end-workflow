@@ -1,4 +1,6 @@
-var foo
-    bar;
 
-console.log('Hello Buddy!');
+function helloWorld() {
+    console.log('Hello Buddy!');
+}
+
+helloWorld();
